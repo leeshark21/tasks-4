@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop Filters | Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">DevPortfolio</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Back to Projects</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="glass-card" style="padding: 1rem 2rem; margin-bottom: 2rem;">
+            <h1 class="section-title" style="margin-bottom: 0; font-size: 2rem;">TechShop <span>Products</span></h1>
+        </div>
+        
+        <div class="products-layout">
+            <!-- Sidebar for Filters -->
+            <aside class="filters-sidebar glass-card" style="padding: 1.5rem;">
+                <h3 style="margin-bottom: 1rem;">Filters</h3>
+                
+                <div class="filter-group">
+                    <label for="categoryFilter">Category</label>
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="smartphones">Smartphones</option>
+                        <option value="accessories">Accessories</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="priceFilter">Max Price: $<span id="priceValue">2000</span></label>
+                    <input type="range" id="priceFilter" min="0" max="2000" step="100" value="2000">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="sortFilter">Sort By</label>
+                    <select id="sortFilter">
+                        <option value="default">Default</option>
+                        <option value="ratingHigh">Rating: High to Low</option>
+                        <option value="ratingLow">Rating: Low to High</option>
+                        <option value="priceLow">Price: Low to High</option>
+                        <option value="priceHigh">Price: High to Low</option>
+                    </select>
+                </div>
+            </aside>
+            
+            <!-- Products Grid -->
+            <section class="products-container">
+                <div id="productsGrid" class="products-grid">
+                    <!-- Products will be rendered here dynamically -->
+                </div>
+                <div id="noProductsMsg" class="empty-state" style="display: none;">
+                    No products found matching your criteria.
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="products.js"></script>
+</body>
+</html>
